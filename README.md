@@ -61,7 +61,7 @@ hidden_cost的数值可以是正数，也可以是负数，代表对广告的扶
 ## 广告定价
 auction_price也就是广告计费，定价主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费)。
 
-$$ auction_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
+$$ auction\\_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
 
 对于GFP，$sorted\\_ecpm$ 就是第一名的 $sorted\\_ecpm$
 对于GSP，$sorted\\_ecpm$ 就是第二名的 $sorted\\_ecpm$
