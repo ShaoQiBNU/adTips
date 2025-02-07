@@ -63,7 +63,7 @@ auction_price也就是广告计费，定价主要有 GFP(按照排序第一的�
 
 $$ auction\\_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
 
-对于GFP，$sorted\\_ecpm$ 就是第一名的 $sorted\\_ecpm$
-对于GSP，$sorted\\_ecpm$ 就是第二名的 $sorted\\_ecpm$
+对于GFP, $sorted\\_ecpm$ 就是第一名的 $sorted\\_ecpm$ ;
+对于GSP, $sorted\\_ecpm$ 就是第二名的 $sorted\\_ecpm$
 
 ratio是不同出价类型在计费时的auction_price除去的部分。
