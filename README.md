@@ -15,7 +15,7 @@
 | $cpc\\_bid$ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
 | $cpm\\_bid$ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
 | $cpa\\_bid$ | 广告主为每次转化付出的成本 |  $$\frac{cost}{convert/action}$$ |
-| $eCPM$ | 预期1000次曝光的cost |  $$eCPM = rank_bid * ctr * cvr * 1000$$ |
+| $eCPM$ | 预期1000次曝光的cost |  $$eCPM = rank\\_bid * ctr * cvr * 1000$$ |
 | auction_price | 计费 | 主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费) |
 
 由表格可以得出：
@@ -61,9 +61,9 @@ hidden_cost的数值可以是正数，也可以是负数，代表对广告的扶
 ## 广告定价
 auction_price也就是广告计费，定价主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费)。
 
-$$ auction_price = (sorted\\_ecpm - hidden\_cost) / ratio $$
+$$ auction_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
 
-对于GFP，$ sorted\\_ecpm $ 就是第一名的 $ sorted\\_ecpm $
-对于GSP，$ sorted\\_ecpm $ 就是第二名的 $ sorted\\_ecpm $
+对于GFP，$sorted\\_ecpm$ 就是第一名的 $sorted\\_ecpm$
+对于GSP，$sorted\\_ecpm$ 就是第二名的 $sorted\\_ecpm$
 
 ratio是不同出价类型在计费时的auction_price除去的部分。
