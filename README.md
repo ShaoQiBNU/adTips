@@ -42,15 +42,10 @@ $$ cpm\_bid = cpc\_bid * ctr * 1000 $$
 | :----:| :----: | :----: | :----: | :----: | :----: | :----: |
 | CPT | Cost per time | 包段时间内整个位置 | 不用算 | 合同 | 品牌 | 1 |
 | GD | guaranteed delivery | 购买特定数量 | rank_bid | 合同 | 品牌 | 1 |
-
 | CPC | Cost per click | 按照广告点击出价，按照广告点击计费 | CPC_bid * ctr * 1000 | auction_price / ctr / 1000 = CPC_bid| 效果 | 1000 * ctr |
-
 | CPM | Cost per mile impression | 按照广告展示1000次出价，按照广告展示计费 | CPM_bid | auction_price / 1000 = CPM_bid | 效果 | 1000 |
-
 | CPA | Cost per action | 按照广告转化出价，按照广告转化计费 | CPA_bid * ctr * cvr * 1000 | auction_price / ctr / cvr / 1000 = CPA_bid | 效果 | 1000 * ctr * cvr |
-
 | oCPC | optimized CPC | 按照广告转化出价，按照广告点击计费 | CPC_bid * ctr * 1000 = CPA_bid * ctr * cvr * 1000 | auction_price / ctr / 1000 = CPA_bid * cvr / 1000 = CPC_bid | 效果 | 1000 * ctr |
-
 | oCPM | optimized CPM | 按照广告转化出价，按照广告展示计费 | CPM_bid = CPA_bid * ctr * cvr * 1000 | auction_price / 1000 = CPM_bid / 1000 = CPA_bid * ctr * cvr| 效果 | 1000 |
 
 CPC和CPA需要广告主将click、convert/action数据上报给广告平台，广告平台才能计算ctr、cvr，作为广告主会有动力不上报真实的click和convert数据，因此出现了oCPC和oCPM。
