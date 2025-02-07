@@ -12,10 +12,10 @@
 | cvr | 转化率 | $$\frac{convert}{click}$$ |
 | cost | 广告主消耗 or 广告主付出的成本，也就是广告平台赚的钱 |  |
 | rank_bid | 出价 | 主要有 $ cpc\_bid, cpm\_bid, cpa\_bid $ |
-| $ cpc\_bid $ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
-| $ cpm\_bid $ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
-| $ cpa\_bid $ | 广告主为每次转化付出的成本 |  $$\frac{cost}{convert/action}$$ |
-| $ eCPM $ | 预期1000次曝光的cost |  $$eCPM = rank_bid * ctr * cvr * 1000$$ |
+| $cpc\_bid$ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
+| $cpm\_bid$ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
+| $cpa\_bid$ | 广告主为每次转化付出的成本 |  $$\frac{cost}{convert/action}$$ |
+| $eCPM$ | 预期1000次曝光的cost |  $$eCPM = rank_bid * ctr * cvr * 1000$$ |
 | auction_price | 计费 | 主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费) |
 
 由表格可以得出：
