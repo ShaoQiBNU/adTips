@@ -11,18 +11,18 @@
 | ctr | 点击率 | $$\frac{click}{show}$$ |
 | cvr | 转化率 | $$\frac{convert}{click}$$ |
 | cost | 广告主消耗 or 广告主付出的成本，也就是广告平台赚的钱 |  |
-| rank_bid | 出价 | 主要有 $cpc\\_bid, cpm\_bid, cpa\_bid $ |
-| $cpc\_bid$ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
-| $cpm\_bid$ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
-| $cpa\_bid$ | 广告主为每次转化付出的成本 |  $$\frac{cost}{convert/action}$$ |
+| rank_bid | 出价 | 主要有 $cpc\\_bid, cpm\\_bid, cpa\\_bid $ |
+| $cpc\\_bid$ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
+| $cpm\\_bid$ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
+| $cpa\\_bid$ | 广告主为每次转化付出的成本 |  $$\frac{cost}{convert/action}$$ |
 | $eCPM$ | 预期1000次曝光的cost |  $$eCPM = rank_bid * ctr * cvr * 1000$$ |
 | auction_price | 计费 | 主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费) |
 
 由表格可以得出：
 
-$$ cpm\_bid = cpa\_bid * ctr * cvr * 1000 $$
+$$ cpm\\_bid = cpa\\_bid * ctr * cvr * 1000 $$
 
-$$ cpm\_bid = cpc\_bid * ctr * 1000 $$
+$$ cpm\\_bid = cpc\\_bid * ctr * 1000 $$
 
 ## 广告类型
 
@@ -52,18 +52,18 @@ CPC和CPA需要广告主将click、convert/action数据上报给广告平台，�
 
 ## 广告boost策略
 
-在计算完 $eCPM$ 之后，广告平台会对广告进行boost干预，以增加或减少广告的投放，具体方式是计算hidden_cost，加到 $eCPM$ 上，得到 $sorted_ecpm$ 。
+在计算完 $eCPM$ 之后，广告平台会对广告进行boost干预，以增加或减少广告的投放，具体方式是计算hidden_cost，加到 $eCPM$ 上，得到 $sorted\\_ecpm$ 。
 
-$$ sorted_ecpm = eCPM + hidden_cost $$ 
+$$ sorted\\_ecpm = eCPM + hidden_cost $$ 
 
 hidden_cost的数值可以是正数，也可以是负数，代表对广告的扶持或打压。一般来说，这种调整包括冷启动boost、广告质量打压以及行业的boost等。通过调整hidden_cost，可以有效地控制广告的投放量和展示效果。
 
 ## 广告定价
 auction_price也就是广告计费，定价主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费)。
 
-$$ auction_price = (sorted\_ecpm - hidden\_cost) / ratio $$
+$$ auction_price = (sorted\\_ecpm - hidden\_cost) / ratio $$
 
-对于GFP，$ sorted\_ecpm $ 就是第一名的 $ sorted\_ecpm $
-对于GSP，$ sorted\_ecpm $ 就是第二名的 $ sorted\_ecpm $
+对于GFP，$ sorted\\_ecpm $ 就是第一名的 $ sorted\\_ecpm $
+对于GSP，$ sorted\\_ecpm $ 就是第二名的 $ sorted\\_ecpm $
 
 ratio是不同出价类型在计费时的auction_price除去的部分。
