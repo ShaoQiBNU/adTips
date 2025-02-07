@@ -52,9 +52,9 @@ CPC和CPA需要广告主将click、convert/action数据上报给广告平台，�
 
 ## 广告boost策略
 
-在计算完 $eCPM$ 之后，广告平台会对广告进行boost干预，以增加或减少广告的投放，具体方式是计算hidden_cost，加到 $eCPM$ 上，得到 $sorted\_ecpm$ 。
+在计算完 $eCPM$ 之后，广告平台会对广告进行boost干预，以增加或减少广告的投放，具体方式是计算hidden_cost，加到 $eCPM$ 上，得到 $sorted_ecpm$ 。
 
-$$ sorted\_ecpm = eCPM + hidden\_cost $$ 
+$$ sorted_ecpm = eCPM + hidden_cost $$ 
 
 hidden_cost的数值可以是正数，也可以是负数，代表对广告的扶持或打压。一般来说，这种调整包括冷启动boost、广告质量打压以及行业的boost等。通过调整hidden_cost，可以有效地控制广告的投放量和展示效果。
 
