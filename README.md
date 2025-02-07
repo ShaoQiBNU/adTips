@@ -10,7 +10,8 @@
 | convert/action | 转化数 |  |
 | ctr | 点击率 | $$\frac{click}{show}$$ |
 | cvr | 转化率 | $$\frac{convert}{click}$$ |
-| cost | 广告主消耗 or 广告主付出的成本，也就是广告平台赚的钱 |  |
+| cost | 广告主消耗 or 广告主付出的成本，也就是广告平台赚的钱 | 来源计费 |
+| advv | 广告主价值 | rank_bid * 真实转化数 |
 | rank_bid | 出价 | 主要有 $cpc\\_bid, cpm\\_bid, cpa\\_bid $ |
 | $cpc\\_bid$ | 广告主为每次点击付出的成本 |  $$\frac{cost}{click}$$ |
 | $cpm\\_bid$ | 广告主为每**1000**次曝光付出的成本 |  $$\frac{cost}{show * 1000}$$ |
@@ -67,3 +68,9 @@ $$ auction\\_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
 对于GSP, $sorted\\_ecpm$ 就是第二名的 $sorted\\_ecpm$
 
 ratio是不同出价类型在计费时的auction_price除去的部分。
+
+## 计费比
+
+计费比 = cost / advv，cost是预估值，advv是真实值。平台希望计费比为1，也就是广告主的付费等于他应该付的费用。
+
+计费比>1，广告主亏钱；计费比<1，平台亏钱。
