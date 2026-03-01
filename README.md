@@ -60,7 +60,7 @@ $$ sorted\\_ecpm = eCPM + hidden_cost $$
 hidden_cost的数值可以是正数，也可以是负数，代表对广告的扶持或打压。一般来说，这种调整包括冷启动boost、广告质量打压以及行业的boost等。通过调整hidden_cost，可以有效地控制广告的投放量和展示效果。
 
 ## 广告定价
-auction_price也就是广告计费，定价主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费)。
+auction_price也就是广告计费，定价主要有 GFP(按照排序第一的出价计费)、GSP(按照排序第二的出价计费)、VCG(损失计费)。
 
 $$ auction\\_price = (sorted\\_ecpm - hidden\\_cost) / ratio $$
 
