@@ -73,7 +73,7 @@ ratio是不同出价类型在计费时的auction_price除去的部分。
 
 VCG(损失计费)
 
-![image](https://github.com/ShaoQiBNU/adTips/tree/main/imgs/1.jpeg)
+![image](https://github.com/ShaoQiBNU/adTips/blob/main/imgs/1.jpeg)
 
 
 ## 广告出价产品
